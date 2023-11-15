@@ -27,7 +27,7 @@ Configuration is managed through environment variables, allowing you to specify 
 To build the Docker image, run:
 
 ```bash
-docker build -t saahirlol/docker-headscale-client:main .
+docker build -t ghcr.io/saahirlol/docker-headscale-client:main .
 ```
 
 ## Running the Container
@@ -44,7 +44,7 @@ docker run -d \
     --volume=/var/lib/tailscale:/var/lib/tailscale \
     -e HEADSCALE_SERVER_URL=https://your-headscale-server-url \
     -e LOGIN_KEY=your-auth-key \
-    saahirlol/docker-headscale-client:main
+    ghcr.io/saahirlol/docker-headscale-client:main
 ```
 
 Replace `https://your-headscale-server-url` with your Headscale server URL and `your-auth-key` with your Tailscale auth key.
@@ -57,7 +57,7 @@ Here's an example `docker-compose.yml`:
 version: '3.8'
 services:
   headscale-client:
-    image: saahirlol/docker-headscale-client:main
+    image: ghcr.io/saahirlol/docker-headscale-client:main
     container_name: my-headscale-client
     network_mode: host
     privileged: true
