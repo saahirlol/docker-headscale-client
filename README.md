@@ -15,7 +15,7 @@ Configuration is managed through environment variables, allowing you to specify 
 
 - `HEADSCALE_SERVER_URL`: The URL of your Headscale server (default is `https://controlplane.tailscale.com:443`).
 - `LOGIN_KEY`: Your Tailscale auth key for automatic authentication (optional).
-
+- `NOMBRE`: The hostname of your container (default is `docker-headscale-client`).
 ## Files
 
 - `Dockerfile`: Builds the Headscale client Docker image.
@@ -44,6 +44,7 @@ docker run -d \
     --volume=/var/lib/tailscale:/var/lib/tailscale \
     -e HEADSCALE_SERVER_URL=https://your-headscale-server-url \
     -e LOGIN_KEY=your-auth-key \
+    -e NOMBRE=docker-headscale-client \
     ghcr.io/saahirlol/docker-headscale-client:main
 ```
 
@@ -66,6 +67,7 @@ services:
     environment:
       - HEADSCALE_SERVER_URL=https://your-headscale-server-url
       - LOGIN_KEY=your-auth-key
+      - NOMBRE=docker-headscale-client
 ```
 
 Run with:
