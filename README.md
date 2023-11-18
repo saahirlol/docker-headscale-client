@@ -14,7 +14,7 @@ This setup provides a Dockerized client for connecting to a Headscale server, an
 Configuration is managed through environment variables, allowing you to specify the Headscale server URL and an optional Tailscale auth key.
 
 - `HEADSCALE_SERVER_URL`: The URL of your Headscale server (default is `https://controlplane.tailscale.com:443`).
-- `LOGIN_KEY`: Your Tailscale auth key for automatic authentication (optional).
+- `LOGIN_KEY`: Your Tailscale auth key for automatic authentication (MANDATORY).
 - `NOMBRE`: The hostname of your container (default is `docker-headscale-client`).
 ## Files
 
