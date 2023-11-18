@@ -3,6 +3,7 @@ FROM tailscale/tailscale
 
 # Set default environment variables for the Tailscale server URL and the auth key
 ENV HEADSCALE_SERVER_URL="https://controlplane.tailscale.com:443"
+ENV NOMBRE="docker-headscale-client"
 ENV LOGIN_KEY=""
 
 # Copy the start script into the container
