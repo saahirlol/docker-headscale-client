@@ -41,7 +41,7 @@ docker run -d \
     --name=my-headscale-client \
     --network=host \
     --privileged \
-    --volume=/var/lib/tailscale:/var/lib/tailscale \
+    --volume=./state/tailscale:/var/lib/tailscale \
     -e HEADSCALE_SERVER_URL=https://your-headscale-server-url \
     -e LOGIN_KEY=your-auth-key \
     -e NOMBRE=docker-headscale-client \
@@ -63,7 +63,7 @@ services:
     network_mode: host
     privileged: true
     volumes:
-      - /var/lib/tailscale:/var/lib/tailscale
+      - ./state/tailscale:/var/lib/tailscale
     environment:
       - HEADSCALE_SERVER_URL=https://your-headscale-server-url
       - LOGIN_KEY=your-auth-key
